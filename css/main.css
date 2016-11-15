@@ -1,0 +1,284 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext);
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.btn-primary {
+  background-color: #008826;
+  color: #fff;
+  font-size: 17px;
+  border: 0px;
+  border-radius: 0px;
+}
+.btn-primary:hover {
+  color: fff;
+  background-color: #00631B;
+}
+
+/*Navbar brand ortalama ve Toogle ciktiginda kapatmak icin @media*/
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
+}
+
+@media screen and (min-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+/*Toogle sol tarafa atmak icin*/
+.navbar-toggle {
+  z-index: 1;
+}
+.navbar-toggle.navbar-left {
+  float: left;
+  margin-left: 10px;
+}
+
+/* Ust Menu Bolumu */
+.topMenu {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.topMenu .navbar-nav li > a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+.topMenu .navbar-nav li > a:hover {
+  background-color: #00631B;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .topMenu {
+    display: none;
+  }
+}
+/* Navbar Bolumu */
+.navbar-default {
+  border: 0px;
+}
+.navbar-default .navbar-collapse {
+  margin: 0px;
+  padding: 0px;
+}
+.navbar-default .navbar-collapse .nav-justified {
+  background-color: #008826;
+}
+.navbar-default .navbar-collapse .nav-justified li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  border-right: 1px solid #fff;
+}
+.navbar-default .navbar-collapse .nav-justified li > a:hover {
+  color: #fff;
+  background-color: #00631B;
+}
+.navbar-default .navbar-collapse .nav-justified li:first-child > a {
+  border-left: 1px solid #fff;
+}
+
+/* ─░cerik Bolumu */
+.content .thumbnail {
+  padding: 0px;
+  border: 0px;
+}
+.content .thumbnail img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.content .thumbnail .caption {
+  padding: 0px;
+}
+.content .thumbnail .caption a {
+  padding: 15px;
+}
+
+/* Footer Bolumu */
+.footer-content {
+  background-color: #282C35;
+  padding: 10px 15px;
+  color: #fff;
+}
+.footer-content .col-sm-4 > img {
+  margin-top: 10px;
+}
+.footer-content .btn-socials {
+  margin-top: 10px;
+}
+.footer-content .btn-socials i {
+  background-color: #1C1F25;
+  color: #fff;
+  padding: 10px 20px;
+}
+.footer-content .btn-socials i:hover {
+  background-color: #008826;
+}
+.footer-content .bilgiler {
+  text-align: center;
+}
+.footer-content .bilgiler ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0;
+}
+.footer-content .bilgiler ul li {
+  display: inline;
+  padding: 10px;
+}
+.footer-content .copyright {
+  padding: 15px 10px 0px 10px;
+  font-size: 11px;
+  color: #53565B;
+}
+
+body {
+  padding-right: 0px !important;
+  margin-right: 0px !important;
+}
+body.modal-open {
+  overflow: auto;
+}
+
+/*--------------------------------------------
+-------------DETAY SAYFASI--------------------
+----------------------------------------------*/
+/* Detay Bolumu */
+.detaylar {
+  background-color: #F3F3F3;
+  color: #000;
+  margin: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.detaylar .detaylar-sol #detaySlider {
+  height: 505px;
+}
+.detaylar .detaylar-sol #detaySlider .item img {
+  width: 100%;
+  height: 505px;
+  object-fit: cover;
+}
+.detaylar .detaylar-sol .thumbnail {
+  margin-top: 15px;
+  padding: 10px;
+}
+.detaylar .detaylar-sol .yorumlar .well textarea {
+  resize: none;
+}
+.detaylar .detaylar-sol .yorumlar .media .media-body h4 {
+  font-size: 17px;
+}
+.detaylar .detaylar-sol .yorumlar .media .media-body p {
+  font-size: 14px;
+}
+.detaylar .detaylar-sag .thumbnail {
+  height: auto;
+}
+.detaylar .detaylar-sag .thumbnail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.detaylar .detaylar-sag .thumbnail .caption .caption-detay p {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: justify;
+}
+.detaylar .detaylar-sag .thumbnail .caption .caption-detay p .tel {
+  color: green;
+  font-weight: 700;
+}
+.detaylar .detaylar-sag .thumbnail .caption .caption-detay p span {
+  font-weight: 400;
+}
+.detaylar .detaylar-sag .thumbnail .caption .caption-detay button {
+  padding: 15px;
+}
+.detaylar .detaylar-sag .detaylar-medya .btn {
+  width: 100%;
+  height: 85px;
+  border: 0px;
+  border-radius: 0px;
+}
+.detaylar .detaylar-sag .uygulama {
+  padding: 0px;
+  margin-top: 15px;
+  text-align: center;
+}
+.detaylar .detaylar-sag .uygulama > img {
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+}
+.detaylar .detaylar-sag .uygulama .caption img {
+  width: 128px;
+  height: 100%;
+}
+
+/* Detay Bolumu Responsive */
+@media screen and (max-width: 767px) {
+  .detaylar-medya .btn {
+    display: none;
+  }
+
+  .uygulama {
+    display: none;
+  }
+
+  .detaylar-sol {
+    margin-top: -100px;
+  }
+}
+/*--------------------------------------------
+-------------SEPET SAYFASI--------------------
+----------------------------------------------*/
+.sepet .thumbnail {
+  position: relative;
+}
+.sepet .thumbnail .caption {
+  padding: 0px;
+}
+.sepet .thumbnail .caption h4 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  padding: 5px;
+  background-color: #008826;
+  color: #fff;
+}
+.sepet .thumbnail .caption p {
+  padding-top: 5px;
+}
+.sepet .thumbnail .caption p .tl {
+  font-weight: 700;
+}
+.sepet .thumbnail .sepetUrunAdet {
+  padding: 0px;
+}
+.sepet .thumbnail .sepetUrunAdet .col-sm-6, .sepet .thumbnail .sepetUrunAdet .col-sm-12 {
+  padding: 7px;
+}
+
+/*# sourceMappingURL=main.css.map */

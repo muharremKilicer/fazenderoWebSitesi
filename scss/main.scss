@@ -1,0 +1,323 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,latin-ext);
+
+@mixin cover-background($img-url) {
+    background: url($img-url) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+$ustMenuButtonColor: #008826;
+
+body, html{
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 16px; 
+	height: 100%;
+  @include cover-background('../img/bg.jpg');
+}
+
+.btn-primary{
+  background-color: #008826;
+  color: #fff;
+  font-size: 17px;
+  border: 0px;
+  border-radius: 0px;
+  &:hover{
+    color: fff;
+    background-color: #00631B;
+  }
+}
+
+
+
+/*Navbar brand ortalama ve Toogle ciktiginda kapatmak icin @media*/
+  .navbar-brand {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      text-align: center;
+      margin: auto;
+  }
+
+  @media screen and (min-width: 767px) {
+      .navbar-brand{
+      	display: none;
+      }
+  }
+
+/*Toogle sol tarafa atmak icin*/
+  .navbar-toggle{
+  	z-index: 1;
+    &.navbar-left{
+      float: left;
+      margin-left: 10px;
+    }
+  }
+
+/* Ust Menu Bolumu */
+  .topMenu{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .navbar-nav{
+      li > a{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 300;
+      }
+      li > a:hover{
+        background-color: #00631B;
+        color: #fff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .topMenu{
+      display: none;
+    }
+  }
+
+/* Navbar Bolumu */
+  .navbar-default{
+  	border:0px;
+    .navbar-collapse{
+      margin: 0px;
+      padding: 0px;
+      .nav-justified {
+          background-color:  $ustMenuButtonColor;
+          li > a{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 300;
+            text-align: center;
+            border-right:1px solid #fff;
+            &:hover{
+              color: #fff ;
+              background-color: #00631B;
+            }
+          }
+          li:first-child > a {
+            border-left:1px solid #fff;
+          }
+      }
+    }
+  }
+
+/* İcerik Bolumu */
+  .content{
+    .thumbnail{
+      padding:0px;
+      border:0px;
+      img{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      .caption{
+        padding: 0px;
+        a{
+          padding:15px;
+        }
+      }
+    }
+  }
+
+/* Footer Bolumu */
+  .footer-content{
+    background-color: #282C35;
+    padding:10px 15px;
+    color: #fff;
+    .col-sm-4 > img{
+      margin-top: 10px;
+    }
+    .btn-socials{
+      margin-top: 10px;
+      i{
+        background-color: #1C1F25;
+        color: #fff;
+        padding:10px 20px;
+        &:hover{
+          background-color: #008826;
+        }
+      }
+    }
+    .bilgiler{
+      text-align: center;
+      ul{
+        list-style-type: none;
+        padding-left: 0px;
+        margin: 0;
+        li{
+          display: inline;
+          padding:10px;
+        }
+      }
+    }
+    .copyright{
+      padding:15px 10px 0px 10px;
+      font-size: 11px;
+      color: #53565B;
+    }
+  }
+
+//Modal'da kayma sorunu için
+  body{
+    padding-right:0px !important;
+    margin-right:0px !important;
+    &.modal-open{
+      overflow: auto;
+    }
+  }
+
+/*--------------------------------------------
+-------------DETAY SAYFASI--------------------
+----------------------------------------------*/
+
+/* Detay Bolumu */
+  .detaylar{
+    background-color:#F3F3F3;
+    color:#000;
+    margin: 0px;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-bottom: 15px;
+    .detaylar-sol{
+      #detaySlider{
+        height: 505px;
+        .item img{
+          width: 100%;
+          height: 505px;
+          object-fit: cover;
+        }
+      }
+      .thumbnail{
+        margin-top: 15px;
+        padding:10px;
+      }
+      .yorumlar{
+        .well{
+          textarea{
+            resize: none;
+          }
+        }
+        .media{
+          .media-body{
+            h4{
+              font-size: 17px;
+            }
+            p{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .detaylar-sag{
+      .thumbnail{
+        height: auto;
+        img{
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+        .caption{
+          .caption-detay{
+            p{
+              font-size: 20px;
+              font-weight: 700;
+              text-align:justify;
+              .tel{
+                color: green;
+                font-weight: 700;
+              }
+              span{
+                font-weight: 400;
+              }
+            }
+            button{
+              padding:15px;
+            }
+          }
+        }
+      }
+      .detaylar-medya{
+        .btn{
+          width: 100%;
+          height: 85px;
+          border:0px;
+          border-radius: 0px;
+        }
+      }
+      .uygulama{
+        padding:0px;
+        margin-top: 15px;
+        text-align: center;
+        > img{
+          margin-top: 15px;
+          width: 100%;
+          height: 100%;
+        }
+        .caption img{
+          width: 128px;
+          height: 100%;
+        }
+      }
+    }
+
+  }
+
+/* Detay Bolumu Responsive */
+  @media screen and (max-width: 767px) {
+    .detaylar-medya{
+      .btn{
+        display: none;
+      }
+    }
+    .uygulama{
+      display: none;
+    }
+    .detaylar-sol{
+      margin-top: -100px;
+    }
+  }
+
+
+/*--------------------------------------------
+-------------SEPET SAYFASI--------------------
+----------------------------------------------*/
+
+.sepet{
+  .thumbnail{
+    position:relative;
+    .caption{
+      padding:0px;
+      h4{
+        position:absolute;
+        left:0px;
+        top:0px;
+        width: 100%;
+        padding:5px;
+        background-color: #008826;
+        color: #fff;
+      }
+      p{
+        padding-top:5px;
+        .tl{
+          font-weight: 700;
+        }
+      }
+    }
+    .sepetUrunAdet{
+      padding:0px;
+      .col-sm-6, .col-sm-12{
+        padding:7px;
+      }
+    }
+  }
+}
+
